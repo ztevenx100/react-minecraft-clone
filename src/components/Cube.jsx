@@ -9,7 +9,7 @@ export const Cube = ({ id, position, texture }) => {
 
   const [ref] = useBox(() => ({
     type: 'Static',
-    position
+    position: position || [0, 0, 0] // Asegúrate de que 'position' tenga un valor válido
   }))
 
   const activeTexture = textures[texture + 'Texture']
@@ -37,7 +37,7 @@ export const Cube = ({ id, position, texture }) => {
       <meshStandardMaterial
         color={isHovered ? 'grey' : 'white'}
         transparent
-        map={activeTexture}
+        map={activeTexture} // Asegúrate de que 'activeTexture' no sea undefined
         attach='material'
       />
     </mesh>

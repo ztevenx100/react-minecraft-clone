@@ -1,5 +1,5 @@
-import { nanoid } from 'nanoid';
-import { create } from 'zustand';
+import { nanoid } from 'nanoid'
+import create from 'zustand'
 
 export const useStore = create(set => ({
   texture: 'dirt',
@@ -19,16 +19,16 @@ export const useStore = create(set => ({
         texture: state.texture,
         pos: [x, y, z]
       }]
-    }));
+    }))
   },
   removeCube: (id) => {
     set(state => ({
       cubes: state.cubes.filter(cube => cube.id !== id)
-    }));
+    }))
   },
   setTexture: (texture) => {
-    set(() => ({ texture }));
+    set(() => ({ texture }))
   },
   saveWorld: () => {},
   resetWorld: () => {}
-}));
+}))
