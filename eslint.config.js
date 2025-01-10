@@ -33,6 +33,13 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      "react/no-unknown-property": ["error", { "ignore": ["intensity"] }],
     },
+  },
+  {
+    "extends": [
+      "plugin:react/recommended",
+      "plugin:react-three-fiber/recommended"
+    ]
   },
 ]

@@ -11,18 +11,16 @@ export const TextureSelector = () => {
 
   // Controla la visibilidad del selector
   useEffect(() => {
-    if (!visible) {
-      setVisible(true) // Activa visibilidad si no está activa
-    }
+    if (visible) {
+      const visibilityTimeout = setTimeout(() => {
+        setVisible(false) // Oculta después de 1 segundo
+      }, 1000)
 
-    const visibilityTimeout = setTimeout(() => {
-      setVisible(false) // Oculta después de 1 segundo
-    }, 1000)
-
-    return () => {
-      clearTimeout(visibilityTimeout) // Limpia el timeout al desmontar
+      return () => {
+        clearTimeout(visibilityTimeout) // Limpia el timeout al desmontar
+      }
     }
-  }, [texture, visible]) // Incluye todas las dependencias necesarias
+  }, [visible]) // Solo depende de 'visible'
 
   // Actualiza la textura seleccionada solo si cambia
   useEffect(() => {
