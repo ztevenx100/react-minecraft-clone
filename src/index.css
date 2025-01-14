@@ -1,7 +1,15 @@
+/* Variables CSS */
+:root {
+    --primary-color: #ffffff;
+    --font-size-large: 40px;
+    --opacity-medium: 0.5;
+}
+
+/* Global Styles */
 * {
     box-sizing: border-box;
 }
-  
+
 html,
 body,
 #root {
@@ -24,15 +32,29 @@ body {
     right: 0;
 }
 
+/* Pointer Styles */
 .pointer {
-    color: white;
-    font-size: 40px;
+    color: var(--primary-color);
+    font-size: var(--font-size-large);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: .5;
+    opacity: var(--opacity-medium);
     z-index: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pointer {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pointer {
+        font-size: 20px;
+    }
 }
 
 .texture-selector {
@@ -52,9 +74,16 @@ body {
     
     img {
         width: 50px;
-        z-index: 100;
+        height: 50px;
+        object-fit: cover;
         image-rendering: pixelated;
-        border: 3px solid #000;
+        cursor: pointer;
+        border: 2px solid transparent;
+        z-index: 100;
+
+        &:hover {
+            border-color: #000;
+        }
     
         &.selected {
             border-color: red;
