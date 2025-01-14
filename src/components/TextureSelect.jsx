@@ -4,10 +4,11 @@ import { useKeyboard } from '../hooks/useKeyboard.js'
 import { useEffect, useState } from 'react'
 
 export const TextureSelector = () => {
-  const [visible, setVisible] = useState(true)
-  const [texture, setTexture] = useStore(state => [state.texture, state.setTexture])
+  const [visible, setVisible] = useState(true);
+  const [texture, setTexture] = useStore(state => [state.texture, state.setTexture]);
+  const { groundTexture, ...imagesBlocks } = images;
 
-  const { dirt, grass, glass, wood, log } = useKeyboard()
+  const { dirt, grass, glass, wood, log } = useKeyboard();
 
   // Controla la visibilidad del selector
   useEffect(() => {
@@ -42,17 +43,21 @@ export const TextureSelector = () => {
 
   return (
     <div className={`texture-selector ${visible ? '' : 'hidden'}`}>
-      {Object.entries(images).map(([imgKey, img]) => {
-        const textureName = imgKey.replace('Img', '')
-        return (
-          <img
-            className={texture === textureName ? 'selected' : ''}
-            key={imgKey}
-            src={img}
-            alt={textureName}
-          />
-        )
-      })}
+      {Object.entries(imagesBlocks)
+        .map(([imgKey, img]) => {
+          const textureName = imgKey.replace('Img', '');
+          const src = img?.source?.data?.src;
+          //console.log('img: ',img);
+          return (
+            <img
+              className={texture === textureName ? 'selected' : ''}
+              key={imgKey}
+              src={src}
+              alt={textureName}
+            />
+          )
+        }
+      )}
     </div>
   )
 }
