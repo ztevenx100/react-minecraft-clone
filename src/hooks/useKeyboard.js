@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import * as images from '../assets/images/textures.js';
 
 const ACTIONS_KEYBOARD_MAP = {
   KeyW: 'moveForward',
@@ -25,7 +26,8 @@ export const useKeyboard = () => {
     glass: false,
     wood: false,
     log: false
-  })
+  });
+  const { groundTexture, ...imagesBlocks } = images;
 
   useEffect(() => {
     const handleKeyDown = event => {

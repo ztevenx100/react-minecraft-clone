@@ -1,5 +1,12 @@
-export { default as grassImg } from './grass.jpg'
-export { default as glassImg } from './glass.png'
-export { default as dirtImg } from './dirt.jpg'
-export { default as logImg } from './log.jpg'
-export { default as woodImg } from './wood.png'
+export { default as blockDiamondImg } from './blockDiamond.png';
+export { default as blockGoldImg } from './blockGold.png';
+export { default as blockObsidianImg } from './blockObsidian.png';
+export { default as bricksImg } from './bricks.png';
+export { default as clayImg } from './clay.png';
+export { default as cobbleImg } from './cobble.png';
+export { default as dirtImg } from './dirt.jpg';
+export { default as glassImg } from './glass.png';
+export { default as grassImg } from './grass.jpg';
+export { default as leavesImg } from './leaves.png';
+export { default as logImg } from './log.jpg';
+export { default as woodImg } from './wood.png';
