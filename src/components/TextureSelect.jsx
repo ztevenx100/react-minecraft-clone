@@ -1,7 +1,7 @@
-import { useStore } from '../hooks/useStore.js'
-import * as images from '../assets/images/textures.js'
-import { useKeyboard } from '../hooks/useKeyboard.js'
-import { useEffect, useState } from 'react'
+import { useStore } from '../hooks/useStore.js';
+import * as images from '../assets/images/textures.js';
+import { useKeyboard } from '../hooks/useKeyboard.js';
+import { useEffect, useState } from 'react';
 
 export const TextureSelector = () => {
   const [visible, setVisible] = useState(true);
@@ -13,11 +13,11 @@ export const TextureSelector = () => {
   // Controla la visibilidad del selector
   useEffect(() => {
     if (!visible) {
-      setVisible(true) // Activa visibilidad si no está activa
+      setVisible(true); // Activa visibilidad si no está activa
     }
 
     const visibilityTimeout = setTimeout(() => {
-      setVisible(false) // Oculta después de 1 segundo
+      setVisible(false); // Oculta después de 1 segundo
     }, 1000)
 
     return () => {
