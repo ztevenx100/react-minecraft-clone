@@ -1,5 +1,10 @@
+export { default as bedrockImg } from './bedrock.png';
+export { default as blockCopperImg } from './blockCopper.png';
 export { default as blockDiamondImg } from './blockDiamond.png';
+export { default as blockEmeraldImg } from './blockEmerald.png';
 export { default as blockGoldImg } from './blockGold.png';
+export { default as blockIronImg } from './blockIron.png';
+export { default as blockLapisLazuliImg } from './blockLapisLazuli.png';
 export { default as blockObsidianImg } from './blockObsidian.png';
 export { default as bricksImg } from './bricks.png';
 export { default as clayImg } from './clay.png';

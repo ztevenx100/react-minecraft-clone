@@ -1,6 +1,11 @@
 import {
+  bedrockImg,
+  blockCopperImg,
   blockDiamondImg,
+  blockEmeraldImg,
   blockGoldImg,
+  blockIronImg,
+  blockLapisLazuliImg,
   blockObsidianImg,
   bricksImg,
   clayImg,
@@ -15,8 +20,13 @@ import {
 
 import { NearestFilter, RepeatWrapping, TextureLoader } from 'three';
 
+const bedrockTexture = new TextureLoader().load(bedrockImg);
+const blockCopperTexture = new TextureLoader().load(blockCopperImg);
 const blockDiamondTexture = new TextureLoader().load(blockDiamondImg);
+const blockEmeraldTexture = new TextureLoader().load(blockEmeraldImg);
 const blockGoldTexture = new TextureLoader().load(blockGoldImg);
+const blockIronTexture = new TextureLoader().load(blockIronImg);
+const blockLapisLazuliTexture = new TextureLoader().load(blockLapisLazuliImg);
 const blockObsidianTexture = new TextureLoader().load(blockObsidianImg);
 const bricksTexture = new TextureLoader().load(bricksImg);
 const clayTexture = new TextureLoader().load(clayImg);
@@ -28,8 +38,13 @@ const leavesTexture = new TextureLoader().load(leavesImg);
 const logTexture = new TextureLoader().load(logImg);
 const woodTexture = new TextureLoader().load(woodImg);
 
+bedrockTexture.magFilter = NearestFilter;
+blockCopperTexture.magFilter = NearestFilter;
 blockDiamondTexture.magFilter = NearestFilter;
+blockEmeraldTexture.magFilter = NearestFilter;
 blockGoldTexture.magFilter = NearestFilter;
+blockIronTexture.magFilter = NearestFilter;
+blockLapisLazuliTexture.magFilter = NearestFilter;
 blockObsidianTexture.magFilter = NearestFilter;
 bricksTexture.magFilter = NearestFilter;
 clayTexture.magFilter = NearestFilter;
@@ -48,8 +63,13 @@ groundTexture.magFilter = NearestFilter;
 
 
 export {
+  bedrockTexture,
+  blockCopperTexture,
   blockDiamondTexture,
+  blockEmeraldTexture,
   blockGoldTexture,
+  blockIronTexture,
+  blockLapisLazuliTexture,
   blockObsidianTexture,
   bricksTexture,
   clayTexture,
