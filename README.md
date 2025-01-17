@@ -1,6 +1,6 @@
 # Minecraft Clone
 
-![image](https://github.com/user-attachments/assets/663874a2-3e5a-48c5-9923-bc9ba0f519e5)
+![image](https://github.com/user-attachments/assets/c282b7e5-d316-41a7-ac9c-8c5e55456605)
 
 ## Clon de [Minecraft](https://minecraft.net/) hecho con:
 - [React](https://reactjs.org/) 
