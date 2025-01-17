@@ -11,7 +11,9 @@ const ACTIONS_KEYBOARD_MAP = {
   Digit2: 'grass',
   Digit3: 'glass',
   Digit4: 'wood',
-  Digit5: 'log'
+  Digit5: 'log',
+  Digit6: 'bedrock',
+  Digit7: 'cobble',
 }
 
 export const useKeyboard = () => {
@@ -25,7 +27,9 @@ export const useKeyboard = () => {
     grass: false,
     glass: false,
     wood: false,
-    log: false
+    log: false,
+    bedrock: false,
+    cobble: false,
   });
   const { groundTexture, ...imagesBlocks } = images;
 
@@ -58,14 +62,14 @@ export const useKeyboard = () => {
       }
     }
 
-    document.addEventListener('keydown', handleKeyDown)
-    document.addEventListener('keyup', handleKeyUp)
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keyup', handleKeyUp);
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-      document.removeEventListener('keyup', handleKeyUp)
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keyup', handleKeyUp);
     }
   }, [])
 
-  return actions
+  return actions;
 }
