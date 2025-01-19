@@ -14,6 +14,8 @@ const ACTIONS_KEYBOARD_MAP = {
   Digit5: 'log',
   Digit6: 'bedrock',
   Digit7: 'cobble',
+  Digit8: 'cobbleDeepslate',
+  Digit9: 'sand',
 }
 
 export const useKeyboard = () => {
@@ -30,6 +32,8 @@ export const useKeyboard = () => {
     log: false,
     bedrock: false,
     cobble: false,
+    cobbleDeepslate: false,
+    sand: false,
   });
   const { groundTexture, ...imagesBlocks } = images;
 
