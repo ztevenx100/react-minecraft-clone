@@ -27,13 +27,18 @@ export const Cube = ({ id, position, texture }) => {
       ref={ref}
       onClick={(e) => {
         e.stopPropagation()
-
-        if (e.altKey) {
-          removeCube(id)
+        
+        if (e.button === 2) {
+          //console.log('click derecho');
+          removeCube(id);
         }
+
+        /*if (e.altKey) {
+          removeCube(id)
+        }*/
       }}
     >
-      <boxBufferGeometry attach='geometry' />
+      <boxGeometry attach='geometry' />
       <meshStandardMaterial
         color={isHovered ? 'grey' : 'white'}
         transparent

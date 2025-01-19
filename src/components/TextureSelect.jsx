@@ -8,7 +8,7 @@ export const TextureSelector = () => {
   const [texture, setTexture] = useStore(state => [state.texture, state.setTexture]);
   const { groundTexture, ...imagesBlocks } = images;
 
-  const { dirt, grass, glass, wood, log, bedrock, cobble } = useKeyboard();
+  const { dirt, grass, glass, wood, log, bedrock, cobble, cobbleDeepslate, sand } = useKeyboard();
 
   // Controla la visibilidad del selector
   useEffect(() => {
@@ -27,7 +27,7 @@ export const TextureSelector = () => {
 
   // Actualiza la textura seleccionada solo si cambia
   useEffect(() => {
-    const options = { dirt, grass, glass, wood, log, bedrock, cobble }
+    const options = { dirt, grass, glass, wood, log, bedrock, cobble, cobbleDeepslate, sand }
 
     const selectedTexture = Object.entries(options).find(
       ([, isEnabled]) => isEnabled
@@ -39,7 +39,7 @@ export const TextureSelector = () => {
         setTexture(textureName) // Actualiza solo si es diferente
       }
     }
-  }, [dirt, grass, glass, wood, log, bedrock, cobble, texture, setTexture]) // Todas las dependencias necesarias
+  }, [dirt, grass, glass, wood, log, bedrock, cobble, cobbleDeepslate, sand, texture, setTexture]) // Todas las dependencias necesarias
 
   return (
     <div className={`texture-selector ${visible ? '' : 'hidden'}`}>
