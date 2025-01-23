@@ -13,5 +13,5 @@
 - [ViteJS](https://vitejs.dev)
 
 ### Referencias:
-Basado en el vídeo de [FreecodeCamp](https://youtube.com/watch?v=qpOZup_3P_A&t=0s)
-Basado en el vídeo de [Midudev](https://www.youtube.com/watch?v=dm7nfe3bOE4)
+ - Basado en el vídeo de [FreecodeCamp](https://youtube.com/watch?v=qpOZup_3P_A&t=0s)
+ - Basado en el vídeo de [Midudev](https://www.youtube.com/watch?v=dm7nfe3bOE4)
